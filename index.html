@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>deez Nuts</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #f5f5f5;
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .info {
+        max-width: 600px;
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #eee;
+        border-radius: 5px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Conway's Game of Life</h1>
+      <div id="game-root"></div>
+      <div class="info">
+        <p><strong>Instructions:</strong></p>
+        <ul>
+          <li>
+            Click cells to toggle them on/off (only when simulation is stopped)
+          </li>
+          <li>
+            Use "Double Size" and "Half Size" buttons to change the grid
+            dimensions based on powers of 2
+          </li>
+          <li>Adjust the speed slider to control the simulation speed</li>
+          <li>Reset clears the grid</li>
+          <li>Random creates a random pattern</li>
+          <li>Add Glider places a glider pattern that will move diagonally</li>
+        </ul>
+        <p><strong>Rules:</strong></p>
+        <ol>
+          <li>
+            Any live cell with fewer than two neighbors dies (underpopulation)
+          </li>
+          <li>Any live cell with two or three neighbors survives</li>
+          <li>
+            Any live cell with more than three neighbors dies (overpopulation)
+          </li>
+          <li>
+            Any dead cell with exactly three neighbors becomes alive
+            (reproduction)
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Load the Game of Life JavaScript -->
+    <script src="app.js"></script>
+  </body>
+</html>
