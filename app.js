@@ -371,7 +371,12 @@ function updateGridDisplay() {
   cells.forEach((cell) => {
     const row = parseInt(cell.dataset.row);
     const col = parseInt(cell.dataset.col);
-    cell.style.backgroundColor = grid[row][col] ? "black" : "white";
+
+    if (grid[row][col]) {
+      cell.style.backgroundColor = "black";
+    } else {
+      cell.style.backgroundColor = "white";
+    }
   });
 }
 
